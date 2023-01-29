@@ -1,0 +1,35 @@
+<!--WEB 425 Angular with TypeScript
+Contributors:
+Richard Krasso
+Thomas James Schultz
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <!-- Search Bar -->
+      <div class="textSearch">
+        <input type="text" id="txtSearch" class="form-control" placeholder="Search by name"
+          [formControl]="txtSearchControl" />
+      </div>
+      <!-- table of composers -->
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" class="text-white bg-dark">ID</th>
+            <th scope="col" class="text-white bg-dark">Composer</th>
+            <th scope="col" class="text-white bg-dark">Genre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--composers for loop -->
+          <tr *ngFor="let composer of composers | async">
+            <td scope="row"><a routerLink="/composer-details/{{composer.composerId}}">{{composer.composerId}}</a></td>
+            <td scope="row">{{ composer.fullName }}</td>
+            <td scope="row">{{ composer.genre }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

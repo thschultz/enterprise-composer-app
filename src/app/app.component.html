@@ -1,0 +1,35 @@
+<!-- WEB 425 Angular with TypeScript
+Contributors:
+Richard Krasso
+Thomas James Schultz -->
+
+<!-- Navigation to other components -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/composer-list">Composer List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contact">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <br /><br />
+
+  <!-- Page Header -->
+  <h2>Assignment 4.4 - Async Pipe</h2>
+
+  <!-- Page Dynamic content -->
+  <div class="row">
+    <div class="col-sm-12">
+      <!-- The router-outlet is where the router will display the component for the current route -->
+      <router-outlet> </router-outlet>
+    </div>
+  </div>
+</div>
